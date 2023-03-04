@@ -16,9 +16,12 @@
         config = { allowUnfree = true; };
       };
     in {
-      overlay =  (final: prev: rec {
+      overlay = final: prev: {
         vimPlugins = prev.vimPlugins // import ./vimPlugins {inherit prev;};
-      });
+      };
+      #overlay =  (final: prev: rec {
+      #  vimPlugins = prev.vimPlugins // import ./vimPlugins {inherit prev;};
+      #});
       packages.x86_64-linux = pkgs;
     };
 }
