@@ -17,11 +17,9 @@
       };
     in {
       overlay = final: prev: {
+        odin-latest = prev.callPackage ./pkgs/odin { };
         vimPlugins = prev.vimPlugins // import ./vimPlugins {inherit prev;};
       };
-      #overlay =  (final: prev: rec {
-      #  vimPlugins = prev.vimPlugins // import ./vimPlugins {inherit prev;};
-      #});
       packages.x86_64-linux = pkgs;
     };
 }
