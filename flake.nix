@@ -18,6 +18,7 @@
     in {
       overlay = final: prev: {
         odin-latest = prev.callPackage ./pkgs/odin { };
+        st-hcs = prev.callPackage ./pkgs/st { };
         vimPlugins = prev.vimPlugins // import ./vimPlugins {inherit prev;};
       };
       packages.x86_64-linux = pkgs;
