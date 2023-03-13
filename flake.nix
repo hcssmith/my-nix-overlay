@@ -19,6 +19,7 @@
       overlay = final: prev: {
         odin-latest = prev.callPackage ./pkgs/odin { };
         st-hcs = prev.callPackage ./pkgs/st { };
+        dwm-hcs = prev.callPackage ./pkgs/dwm { };
 		acme-editor = prev.callPackage ./pkgs/acme-editor { };
         vimPlugins = prev.vimPlugins // import ./vimPlugins {inherit prev;};
       };
