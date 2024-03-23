@@ -18,6 +18,7 @@
     in {
       overlay = final: prev: {
         odin-latest = prev.callPackage ./pkgs/odin { };
+        noweb-latest = prev.callPackage ./pkgs/noweb { };
         st-hcs = prev.callPackage ./pkgs/st { };
         dwm-hcs = prev.callPackage ./pkgs/dwm { };
 		acme-editor = prev.callPackage ./pkgs/acme-editor { };
